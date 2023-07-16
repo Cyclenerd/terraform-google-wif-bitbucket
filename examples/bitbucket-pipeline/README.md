@@ -11,7 +11,7 @@ With this example the following steps are executed and configured:
 1. Allow login via Workload Identity Provider and limit login only from the Bitbucket repository (UUID)
 1. Output the Workload Identity Pool Provider resource name for Bitbucket pipeline configuration
 
-> An example of a working Bitbucket pipeline configuration (`.bitbucket-pipelines.yml`) can be found on [Bitbucket](https://bitbucket.org/cyclenerd/google-workload-identity-federation-for-bitbucket/src/master/bitbucket-pipelines.yml).
+> An example of a working Bitbucket pipeline configuration (`bitbucket-pipelines.yml`) can be found on [Bitbucket](https://bitbucket.org/cyclenerd/google-workload-identity-federation-for-bitbucket/src/master/bitbucket-pipelines.yml).
 
 <!-- BEGIN_TF_DOCS -->
 

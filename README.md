@@ -45,7 +45,7 @@ Here you will find the OIDC information:
 * Audience: `allowed_audiences`
 * Repository UUID: `repository`
 
-> An example of a working Bitbucket pipeline configuration (`.bitbucket-pipelines.yml`) can be found on [Bitbucket](https://bitbucket.org/cyclenerd/google-workload-identity-federation-for-bitbucket/src/master/bitbucket-pipelines.yml).
+> An example of a working Bitbucket pipeline configuration (`bitbucket-pipelines.yml`) can be found on [Bitbucket](https://bitbucket.org/cyclenerd/google-workload-identity-federation-for-bitbucket/src/master/bitbucket-pipelines.yml).
 
 Allow service account to login via Workload Identity Provider and limit login only from the Bitbucket repository (UUID):
 
