@@ -31,7 +31,7 @@ module "bitbucket-wif" {
 }
 
 # Get the Workload Identity Pool Provider resource name for Bitbucket pipeline configuration
-output "gitlab-workload-identity-provider" {
+output "bitbucket-workload-identity-provider" {
   description = "The Workload Identity Provider resource name"
   value       = module.bitbucket-wif.provider_name
 }
