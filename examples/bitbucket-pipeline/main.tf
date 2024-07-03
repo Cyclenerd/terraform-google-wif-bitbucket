@@ -1,7 +1,7 @@
 # Create Workload Identity Pool Provider for Bitbucket
 module "bitbucket-wif" {
   source            = "Cyclenerd/wif-bitbucket/google"
-  version           = "~> 1.0.0"
+  version           = "~> 2.0.0"
   project_id        = var.project_id
   issuer_uri        = var.bitbucket_issuer_uri
   allowed_audiences = var.bitbucket_allowed_audiences

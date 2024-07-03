@@ -9,8 +9,8 @@ variable "bitbucket_issuer_uri" {
 }
 
 variable "bitbucket_allowed_audiences" {
-  type        = string
-  description = "The Bitbucket allowed audience"
+  type        = list(string)
+  description = "The Bitbucket allowed audiences"
 }
 
 variable "bitbucket_repository" {

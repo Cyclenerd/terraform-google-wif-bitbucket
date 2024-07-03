@@ -97,7 +97,7 @@ variable "issuer_uri" {
 }
 
 variable "allowed_audiences" {
-  type        = string
+  type        = list(string)
   description = "Bitbucket identity provider allowed audiences"
 }
 

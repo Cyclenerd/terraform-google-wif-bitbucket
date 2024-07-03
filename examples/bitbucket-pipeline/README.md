@@ -19,7 +19,7 @@ With this example the following steps are executed and configured:
 # Create Workload Identity Pool Provider for Bitbucket
 module "bitbucket-wif" {
   source            = "Cyclenerd/wif-bitbucket/google"
-  version           = "~> 1.0.0"
+  version           = "~> 2.0.0"
   project_id        = var.project_id
   issuer_uri        = var.bitbucket_issuer_uri
   allowed_audiences = var.bitbucket_allowed_audiences
@@ -56,7 +56,7 @@ output "bitbucket-workload-identity-provider" {
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_bitbucket_account_id"></a> [bitbucket\_account\_id](#input\_bitbucket\_account\_id) | The account id of the service account for Bitbucket | `string` | n/a | yes |
-| <a name="input_bitbucket_allowed_audiences"></a> [bitbucket\_allowed\_audiences](#input\_bitbucket\_allowed\_audiences) | The Bitbucket allowed audience | `string` | n/a | yes |
+| <a name="input_bitbucket_allowed_audiences"></a> [bitbucket\_allowed\_audiences](#input\_bitbucket\_allowed\_audiences) | The Bitbucket allowed audiences | `list(string)` | n/a | yes |
 | <a name="input_bitbucket_issuer_uri"></a> [bitbucket\_issuer\_uri](#input\_bitbucket\_issuer\_uri) | The Bitbucket identity provider URL | `string` | n/a | yes |
 | <a name="input_bitbucket_repository"></a> [bitbucket\_repository](#input\_bitbucket\_repository) | The Bitbucket repository (UUID) | `string` | n/a | yes |
 | <a name="input_project_id"></a> [project\_id](#input\_project\_id) | The ID of the project | `string` | n/a | yes |

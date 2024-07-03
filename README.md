@@ -24,10 +24,10 @@ Create Workload Identity Pool and Provider:
 # Create Workload Identity Pool Provider for Bitbucket
 module "bitbucket-wif" {
   source            = "Cyclenerd/wif-bitbucket/google"
-  version           = "~> 1.0.0"
+  version           = "~> 2.0.0"
   project_id        = "your-project-id"
   issuer_uri        = "your-bitbucket-identity-provider-url"
-  allowed_audiences = "your-bitbucket-identity-provider-audience"
+  allowed_audiences = ["your-bitbucket-identity-provider-audience"]
 }
 
 # Get the Workload Identity Pool Provider resource name for Bitbucket pipeline configuration
@@ -101,7 +101,7 @@ Default attribute mapping:
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_allowed_audiences"></a> [allowed\_audiences](#input\_allowed\_audiences) | Bitbucket identity provider allowed audiences | `string` | n/a | yes |
+| <a name="input_allowed_audiences"></a> [allowed\_audiences](#input\_allowed\_audiences) | Bitbucket identity provider allowed audiences | `list(string)` | n/a | yes |
 | <a name="input_attribute_condition"></a> [attribute\_condition](#input\_attribute\_condition) | (Optional) Workload Identity Pool Provider attribute condition expression | `string` | `null` | no |
 | <a name="input_attribute_mapping"></a> [attribute\_mapping](#input\_attribute\_mapping) | Workload Identity Pool Provider attribute mapping | `map(string)` | <pre>{<br>  "attribute.aud": "attribute.aud",<br>  "attribute.branch_name": "assertion.branchName",<br>  "attribute.iss": "attribute.iss",<br>  "attribute.pipeline_uuid": "assertion.pipelineUuid",<br>  "attribute.repository": "assertion.repositoryUuid",<br>  "attribute.step_uuid": "assertion.stepUuid",<br>  "attribute.sub": "attribute.sub",<br>  "attribute.workspace_uuid": "assertion.workspaceUuid",<br>  "google.subject": "assertion.sub"<br>}</pre> | no |
 | <a name="input_issuer_uri"></a> [issuer\_uri](#input\_issuer\_uri) | Bitbucket identity provider URL | `string` | n/a | yes |
